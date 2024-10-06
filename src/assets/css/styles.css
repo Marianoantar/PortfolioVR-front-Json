@@ -1,0 +1,273 @@
+/* Importar fuentes custom*/
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+@font-face{
+	font-family: "antagon";
+	src: url("fonts/Antagon.otf");
+}
+
+/*Generales*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 1.4vw;
+	background: url("../img/pattern.png");
+	background-attachment: fixed;
+}
+
+.clearfix{
+	float:none;
+	clear:both;
+}
+
+/*Barra de navegacion / cabecera*/
+
+header{
+	display: block;
+	width: 100%;
+	height: 90px;
+	background: rgba(53, 103, 164, 0.8);
+	position: fixed;
+	text-transform: uppercase;
+}
+
+header ul{
+	display: block;
+	width: 60%;
+	height: inherit;
+	margin: 0px auto;
+	margin-top: -3px;
+}
+
+header ul li{
+	display: inline-block;
+	margin: 0px auto;
+	text-align: center;
+	line-height: 88px;
+}
+
+header a{
+	display: block;
+	padding-right: 3.65vw;
+	padding-left: 3.65vw;
+	height: inherit;
+	text-decoration: none;
+	color:white;
+	transition: all 300ms;
+}	
+
+header a:hover,
+.actived{
+	background: rgba(0,0,0,0.5);
+}
+
+/*Logotipo*/
+
+#logo{
+	font-family: "antagon";
+	font-size: 2.3vw;
+}
+
+#logo {
+	transition: color 500ms, transform 500ms;
+}
+
+
+#logo:hover{
+	background: transparent;
+	color: black;
+	transform:scale(1.50,1.50);
+}
+
+/*Contenedor principal*/
+
+#content{
+	min-height: 600px;
+	height: auto;
+	width: 75%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 40px black;
+	border-left:1px solid #b7b7b7;
+	border-right:1px solid #b7b7b7;
+	background: rgba(255, 255, 255, 0.7);
+	padding-top: 120px;
+}
+
+
+
+.container{
+	padding: 50px;
+	padding-top: 10px;
+}
+
+.container .image{
+	float: left;
+	width: 47%;
+}
+
+.container .image img{
+	width: 100%;
+}
+
+.container .data{
+	float: left;
+	width: 48%;
+	margin-left:30px;
+}
+
+.container h2{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+/*Sección con formulario*/
+form{
+	width: 80%;
+}
+
+form label{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea{
+	width: 40%;
+	padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+	display: block;
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 15px; 
+	color:white;
+	background: rgba(53, 103, 164, 1);
+	border: 1px solid rgba(13, 67, 133, 1);
+	cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+	width: 20%;
+	float: left;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.button-edit{
+	background: orange;
+	border: none;
+}
+
+.button-delete{
+	background: red;
+	border: none;
+}
+
+form button:hover,
+form input[type="submit"]:hover{
+	background: rgba(53, 103, 164, 0.8);
+	border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled]{
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.form_error{
+	font-size: 13px;
+	padding: 3px;
+	background: red;
+	color:white;
+	margin-left: 5px;
+}
+
+.message{
+	width: 50%;
+	padding: 5px;
+	border: 1px solid #eee;
+}
+
+.success{
+	background: green;
+	color: white;
+}
+
+.message a{
+	color: white;
+}
+
+.failed{
+	background: red;
+	color: white;
+}
+
+
+
+/*Pie de pagina*/
+footer {
+	width: 75%;
+	margin: 0px auto;
+	padding-top: 15px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*Pagina de proyectos*/
+
+.project{
+	list-style: none;
+	display: block;
+	float: left;
+	width: 28%;
+	text-align: center;
+	margin-left: 27px;
+	margin-right: 25px;
+	margin-bottom: 30px;
+}
+
+.project .image{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+
+.project img{
+	width: 100%;
+}
+
+.project a{
+	text-decoration: none;
+	color: black;
+}
+
+.confirm{
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}

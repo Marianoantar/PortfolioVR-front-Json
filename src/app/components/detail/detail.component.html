@@ -1,0 +1,27 @@
+<div class="container">
+
+    @if (project.image) {
+        <img class="image" src="{{url+'get-image/'+project.image}}" >
+    }
+
+    <div class="data">
+        <h1>Proyecto {{project.name}} - Id:{{project.id}}</h1>
+        <h3>{{project.description}}</h3>
+        <p>{{project.category}}</p>
+        <p>{{project.langs}}</p>
+    
+        @if (deleteConfirm == false) {
+            <p>
+                <a [routerLink]="['/editar-proyecto/', project.id]" class="button-edit" >Editar</a>
+                <a class="button-delete" (click)="setConfirm(true)">Borrar</a>
+            </p>
+        } 
+        @if (deleteConfirm == true) {
+            <p>
+                <span class="confirm"> Estas seguro que quieres eliminar el Projecto? </span>
+                <a class="button-edit" (click)="setConfirm(false)">Cancelar</a>
+                <a class="button-delete" (click)="deleteProject(project.id)">Eliminar Proyecto</a>
+            </p>
+        }
+    </div>
+</div>

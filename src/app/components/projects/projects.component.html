@@ -1,0 +1,22 @@
+
+<div class="container">
+    <h2>
+        Proyectos
+    </h2>
+    @if (charging) {
+        <p>Cargando...</p>
+    } @else {
+        <ul>
+            <li *ngFor="let project of projects" class="project">
+                <a [routerLink]="['/proyecto/'+ project.name]">
+                    <div class="image">
+                        <img src="{{url+'get-image/'+project.image}}" *ngIf="project.image">
+    
+                    </div>
+                    <h3>{{project.name}}</h3>
+                    <p>{{project.category}}</p>
+                </a>
+            </li>
+        </ul>
+    }
+</div>

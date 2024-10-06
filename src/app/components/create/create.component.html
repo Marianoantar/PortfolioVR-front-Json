@@ -1,0 +1,68 @@
+
+<div class="container">
+    <h2>{{title}}</h2>
+
+    @if (status == 'success') {
+        <p class="message success">El proyecto se ha creado correctamente, puedes verlo 
+            <a [routerLink]="['/proyecto/'+ saveProject.name]">aqui</a> 
+            <!-- [routerLink]="['/proyecto/'+ project.name]" -->
+        </p>
+    }
+    @if (status == 'failed') {
+        <p class="message failed">Ha ocurrido un error al crear el proyecto</p>
+    }
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required />
+            <span *ngIf="name.touched && !name.valid" class="form_error">
+                El nombre es obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="description">Descripcion</label>
+            <input type="textarea" name="description" #description="ngModel" [(ngModel)]="project.description" required />
+            <span *ngIf="description.touched && !description.valid" class="form_error">
+                La descripcion es obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="category">Categoria</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required />
+            <span *ngIf="category.touched && !category.valid" class="form_error">
+                La categoria es obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="year">Año de lanzamiento</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year"  />
+        </p>
+
+        <p>
+            <label for="langs">Lenguajes utilizados</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs"  />
+            <span *ngIf="langs.touched && !langs.valid" class="form_error">
+                Los lenguajes son obligatorios
+            </span>
+        </p>
+
+        <p>
+            <label for="image">Imagen del proyecto</label>
+            @if (project.image) {
+                <div style="float: none;">
+                    <img src="{{url+'get-image/'+project.image}}" style="width: 100px;" />
+                </div>
+            }
+            <input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)" />
+        </p>
+
+        <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid">
+
+
+
+    </form>
+</div>
