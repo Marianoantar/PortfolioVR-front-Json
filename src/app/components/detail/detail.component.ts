@@ -1,5 +1,6 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { OnInit, signal } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProjectService } from '../../services/project.service';
 import { Proyecto } from '../../models/project';
@@ -23,8 +24,9 @@ export class DetailComponent implements OnInit {
   public name: string;
   public url: string;
   public id: string;
-
   public deleteConfirm: boolean;
+  public hasToken = signal(false); 
+  public token: string | null=null;
 
 
   constructor(
@@ -41,6 +43,15 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.token = localStorage.getItem('tokenEdition');
+    if(this.token) {
+      if (this.token === 'true') {
+        this.hasToken.set(true);
+      } else {
+        this.hasToken.set(false);
+      }
+    }
+
     this._route.params.subscribe(params => {
       const name = params['name'];
       this.getProject(name);
@@ -51,12 +62,7 @@ export class DetailComponent implements OnInit {
   async getProject(name: string) {
     try {
       this._projectService.getProjectByName(name).subscribe((project: Proyecto) => {
-
-        console.log('this.project(DETAIL) = ', this.project)
-        console.log('project(DETAIL) = ', project)
-
         this.project = project;
-        console.log('Proyecto bajado: ', project)
       })
     } catch (err) {
       console.log(err);

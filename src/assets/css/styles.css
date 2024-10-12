@@ -115,7 +115,10 @@ header a:hover,
 
 .container .image{
 	float: left;
-	width: 47%;
+	max-height: 80svh;
+	/* width: 47%; */
+	width: auto;
+	max-width: 47%;
 }
 
 .container .image img{

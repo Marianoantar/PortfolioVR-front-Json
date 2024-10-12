@@ -1,0 +1,8 @@
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5; /* Opcional: para dar un efecto visual de deshabilitado */
+  }
+.image {
+    height: 50%;
+}

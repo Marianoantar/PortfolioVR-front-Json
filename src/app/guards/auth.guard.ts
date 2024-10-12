@@ -7,7 +7,7 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   } else {
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = '/login';
+    window.location.href = '/';
     return false;
   }
 };

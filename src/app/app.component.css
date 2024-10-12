@@ -1,0 +1,35 @@
+dialog{
+    margin-top: 10vh;
+    margin-left: 37vw;
+    width: 20vw;
+    height: 12vh;
+    border: 0;
+    background-color: rgb(115, 166, 243);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+div p{
+    color: white;
+    text-align: center;
+    padding-top: 1vh;
+    font-size: 1vw;
+    font-family: Arial, sans-serif;
+}
+
+div input{
+    width: 80%;
+    margin-top: 1vh;
+    border: none !important;
+}
+
+div button{
+    margin-top: 1vh;
+    font-size: 1vw;
+
+}

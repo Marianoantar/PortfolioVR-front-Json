@@ -18,5 +18,5 @@ export const routes: Routes = [
     { path: 'contacto', component: ContactComponent },
     { path: 'proyecto/:name', component: DetailComponent},
     { path: 'editar-proyecto/:id', component: EditComponent},
-    { path: '**', component: ErrorComponent}
+    { path: '**', component: AbautComponent}
 ];

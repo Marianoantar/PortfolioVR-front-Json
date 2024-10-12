@@ -65,7 +65,6 @@ export class CreateComponent implements OnInit{
     } catch (error) {
       console.error(error);
       this.status = 'failed';
-      // Maneja el error según tus necesidades
     }
   }
 

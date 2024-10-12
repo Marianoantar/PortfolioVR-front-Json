@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Global } from './services/global';
+
 
 @Component({
   selector: 'app-root',
@@ -12,12 +14,13 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'proyecto-portfolio';
   // todo- Codigo para poder aditar proyectos
-  codigoEdicion = '12345';
+  codigoEdicion: string;
 
   @ViewChild('dialog') dialog!: ElementRef<HTMLDialogElement>;
   @ViewChild('codeInputRef') codeInputRef!: ElementRef;
 
   constructor() {
+    this.codigoEdicion = Global.codigoEdicion;
   }
 
   
@@ -27,12 +30,11 @@ export class AppComponent {
   
   closeDialog(){
     const codeInputValue = this.codeInputRef.nativeElement.value;
-    console.log('Código ingresado:', codeInputValue);
     if (codeInputValue && codeInputValue === this.codigoEdicion){
       localStorage.setItem('tokenEdition', 'true');
     } else {
       localStorage.setItem('tokenEdition', 'false');
-      alert('Código incorrecto');
+      // alert('Código incorrecto');
     }
     this.dialog.nativeElement.close();
   }
