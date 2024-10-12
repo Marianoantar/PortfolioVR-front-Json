@@ -4,5 +4,6 @@
     opacity: 0.5; /* Opcional: para dar un efecto visual de deshabilitado */
   }
 .image {
-    height: 50%;
+    max-height: 80svh;
+    object-fit: contain;
 }
