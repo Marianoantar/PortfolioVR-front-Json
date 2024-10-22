@@ -4,7 +4,7 @@
     <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre Mi</a></li>
     <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
     <li (click)="openDialog()"><a id="logo">MT</a></li>
-    <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear proyecto</a></li>
+    <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear proyec</a></li>
     <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
   </ul>
 </header>
@@ -20,7 +20,7 @@
 <!-- ! DIALOGO PARA INGRESAR CODIGO Y ACTIVAR MODO EDICION -->
 <dialog method="modal" #dialog>
   <div class="modal-content">
-    <p>Ingrese el código de acceso:</p>
+    <p>Código de acceso modo edicion:</p>
     <input type="password" name="codeInput" id="codeInput" #codeInputRef>
     <button type="button" id="submitButton" (click)="closeDialog()">Confirmar</button>
   </div>

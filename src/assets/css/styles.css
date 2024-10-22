@@ -23,9 +23,20 @@
 
 body{
 	font-family: "yanone", Arial, Helvetica;
-	font-size: 1.4vw;
+	font-size: 1.2vw;
 	background: url("../img/pattern.png");
 	background-attachment: fixed;
+}
+
+@media (500px<width<=700px) {
+	body {
+		font-size: 2.5vw;
+	}
+}
+@media (width<=500px) {
+	body {
+		font-size: 3.7vw;
+	}
 }
 
 .clearfix{
@@ -39,17 +50,21 @@ header{
 	display: block;
 	width: 100%;
 	height: 90px;
+	/* font-size: 1.8vw; */
+	font-size: clamp(12px, 1.8vw, 24px);
 	background: rgba(53, 103, 164, 0.8);
 	position: fixed;
 	text-transform: uppercase;
 }
 
 header ul{
-	display: block;
-	width: 60%;
+	/* display: block; */
+	display: flex;
+    justify-content: center;
+	margin: 0px auto;
+	width: 70%;
 	height: inherit;
 	margin: 0px auto;
-	margin-top: -3px;
 }
 
 header ul li{
@@ -61,13 +76,15 @@ header ul li{
 
 header a{
 	display: block;
-	padding-right: 3.65vw;
-	padding-left: 3.65vw;
+	padding-right: 2.6vw;
+	padding-left: 2.6vw;
 	height: inherit;
 	text-decoration: none;
 	color:white;
 	transition: all 300ms;
 }	
+
+
 
 header a:hover,
 .actived{
@@ -78,7 +95,7 @@ header a:hover,
 
 #logo{
 	font-family: "antagon";
-	font-size: 2.3vw;
+	font-size:3vw;
 }
 
 #logo {
@@ -90,6 +107,26 @@ header a:hover,
 	background: transparent;
 	color: black;
 	transform:scale(1.50,1.50);
+}
+
+@media (550px < width <= 700px) {
+	header a{
+		padding-right: 2vw;
+		padding-left: 2vw;
+	}
+	#logo{
+		font-size:3.2vw;
+	}
+}
+
+@media (width<=550px) {
+	header a{
+		padding-right: 0.5vw;
+		padding-left: 0.5vw;
+	}
+	#logo{
+		font-size:3.7vw;
+	}
 }
 
 /*Contenedor principal*/
@@ -104,28 +141,32 @@ header a:hover,
 	border-right:1px solid #b7b7b7;
 	background: rgba(255, 255, 255, 0.7);
 	padding-top: 120px;
+	overflow: scroll;
 }
 
 
 
 .container{
-	padding: 50px;
+	padding: 10px;
 	padding-top: 10px;
+	height: auto;
 }
 
-.container .image{
-	float: left;
-	width: 47%;
+
+@media(width < 550px){
+	.container .image{
+		width: 100%;
+	}
+	#content{
+		width: 85%;
+	}
 }
 
-.container .image img{
-	width: 100%;
-}
-
-.container .data{
-	float: left;
-	width: 48%;
-	margin-left:30px;
+.container h1{
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 3vh;
 }
 
 .container h2{
@@ -160,21 +201,23 @@ form input[type="submit"],
 .button-edit,
 .button-delete{
 	display: block;
-	font-size: 17px;
-	padding: 10px;
+	font-size: 2vw;
+	padding: 0.5vw 2vw 0.5vw 2vw;
 	margin-top: 15px; 
 	color:white;
 	background: rgba(53, 103, 164, 1);
 	border: 1px solid rgba(13, 67, 133, 1);
 	cursor: pointer;
-}
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);}
 
 .button-edit,
 .button-delete{
-	width: 20%;
+	width: auto;
+	height: auto;
 	float: left;
 	margin-right: 10px;
 	text-decoration: none;
+	margin-bottom: 10vh;
 }
 
 .button-edit{
@@ -246,22 +289,75 @@ footer {
 	float: left;
 	width: 28%;
 	text-align: center;
-	margin-left: 27px;
-	margin-right: 25px;
-	margin-bottom: 30px;
+	margin-left: 1.6vw;
+	margin-right: 1.6vw;
+	margin-bottom: 2vh;
 }
 
 .project .image{
 	width: 100%;
-	height: 150px;
+	float: left;
+	max-height: min-content;
+	max-height: 22vh;
 	overflow: hidden;
 }
-
 .project img{
 	width: 100%;
+	object-fit: cover;
+	max-height: 18vh;
 }
 
+@media (795px < width < 950px){
+	.project{
+		margin-left: 1.6vw;
+		margin-right: 1.6vw;
+	}
+
+	.project .image{
+		max-height: 12vh;
+
+	}
+}
+
+@media (550px < width < 794px){
+
+	.project{
+		width: 45%;
+	}
+	.project .image{
+		max-height: 11vh;
+		width: 40;
+	}
+	.project img{
+		width: 100%;
+		object-fit:cover;
+	}
+	div img{
+		max-height: 10vh;
+	}
+}
+
+@media(width <= 550px){
+	.project{
+		width: 95%;
+	}
+	
+	.project .image{
+		max-height: none;
+	}
+
+	.project img{
+		width: 80%;
+		object-fit:cover;
+		max-height: 100%;
+	}
+
+}
+
+
+
 .project a{
+	/* height: 16vh; */
 	text-decoration: none;
 	color: black;
 }

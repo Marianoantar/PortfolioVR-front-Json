@@ -4,13 +4,13 @@
 	width: 70%;
 	margin: 0px auto;
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 70px;
+	margin-top: 5vh;
+	margin-bottom: 10vh;
 }
 
 #title h1{
     font-family: antagon;
-	font-size: 4vw;
+	font-size: 7vh;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 5px;
 }
@@ -28,15 +28,47 @@ article.about{
 	margin-bottom: 20px;
 	font-size: 23px;
 }
-
-.about h2{
+article h2{
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 5px;
 	margin-bottom: 5px;
+	font-size: 4.5vh;
 }
 
-.about p{
+article p{
 	padding-top: 20px;
 	padding-bottom: 30px;
 	text-align: justify;
+}
+
+@media(600px < width <= 800px){
+	#title h1{
+		font-size: 5vh;
+	}
+	article h2{
+		font-size: 3.5vh;
+	}
+}
+
+@media(width <= 600px){
+	#contenedor{
+		width: 110%;
+		margin: 0px auto;
+		margin-left: -17px;
+	}
+	#title{
+		width: 70%;
+		margin-top: 4vh;
+		margin-bottom: 6vh;
+	}
+	#title h1{
+		font-size: 4vh;
+	}
+	article h2{
+		font-size: 3vh;
+	}
+	article p{
+        font-size: 2vh;
+    }
+
 }

@@ -22,12 +22,13 @@
         </p>
 
         <p>
-            <label for="description">Descripcion</label>
-            <input type="textarea" name="description" #description="ngModel" [(ngModel)]="project.description" required />
+            <label for="description">Descripción</label>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required style="width: 100%; height: 100px;"></textarea>
             <span *ngIf="description.touched && !description.valid" class="form_error">
-                La descripcion es obligatoria
+                La descripción es obligatoria
             </span>
         </p>
+        
 
         <p>
             <label for="category">Categoria</label>

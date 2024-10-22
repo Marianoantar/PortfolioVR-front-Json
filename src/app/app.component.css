@@ -1,24 +1,36 @@
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad según tus necesidades */
+  }
+
 dialog{
-    margin-top: 10vh;
-    margin-left: 37vw;
-    width: 20vw;
-    height: 12vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 22vw;
+    height: 13vh;
     border: 0;
+    overflow: hidden;
+
     background-color: rgb(115, 166, 243);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .modal-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
 }
 
 div p{
     color: white;
     text-align: center;
     padding-top: 1vh;
-    font-size: 1vw;
+    font-size: clamp(12px, 1.4vw, 18px);
     font-family: Arial, sans-serif;
 }
 
@@ -30,6 +42,30 @@ div input{
 
 div button{
     margin-top: 1vh;
-    font-size: 1vw;
+    margin-bottom: 1vh;
+    font-size: clamp(12px, 1.4vw, 15px);
+    border-radius: 5px;
+    padding: 5px;
+}
 
+@media(600px < width <= 768px) {
+    dialog{
+        width: 30vw;
+        height: 12vh;
+    }
+    div button{
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+    }
+}
+
+@media(width <= 600px) {
+    dialog{
+        width: 45vw;
+        height: 12.5vh;
+    }
+    div button{
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+    }
 }
