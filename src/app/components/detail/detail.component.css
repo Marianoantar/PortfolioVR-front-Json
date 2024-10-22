@@ -100,7 +100,7 @@
 		text-decoration: none;
 		margin-top: 5vh;
 		margin-bottom: 7vh;
-		font-size: 2.5vw;
+		font-size: 4vw;
 	}
 }
 
@@ -110,11 +110,18 @@
 	width: 48%;
 	margin-left:30px;
 }
+.container-detail .data{
+	font-size: 3.5vw;
+}
 
  .data div {
 	display: flex;
 	align-items: center;
 	justify-content:center;
+}
+.button-edit,
+.button-delete{
+	font-size: 5vw;
 }
 
 }
