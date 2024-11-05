@@ -30,8 +30,8 @@ export class CreateComponent implements OnInit{
     private _uploadService: UploadService
   ) { 
     this.title = 'Crear Projector';
-    this.project = new Project('','','',2024,'', '');
-    this.saveProject = new Project('','','',2024,'', '');
+    this.project = new Project('','','',2024,'','', '');
+    this.saveProject = new Project('','','',2024,'','', '');
     this.url =Global.url;
   };
 

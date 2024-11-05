@@ -33,8 +33,8 @@ export class EditComponent implements OnInit{
     // private _route: ActivatedRoute
   ) { 
     this.title = 'Editar Projecto';
-    this.project = new Proyecto('','','','',2024,'', '');
-    this.saveProject = new Proyecto('','','','',2024,'', '');
+    this.project = new Proyecto('','','','',2024,'','', '');
+    this.saveProject = new Proyecto('','','','',2024,'','', '');
     this.url = Global.url; 
   }
 

@@ -52,6 +52,11 @@
         </p>
 
         <p>
+            <label for="link">Link</label>
+            <input type="text" name="link" #link="ngModel" [(ngModel)]="project.link"  />
+        </p>
+
+        <p>
             <label for="image">Imagen del proyecto</label>
             @if (project.image) {
                 <div style="float: none;">

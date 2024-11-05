@@ -9,6 +9,9 @@
         <h4>Descripcion: {{project.description}}</h4>
         <p>Categoria: {{project.category}}</p>
         <p>Lenguajes: {{project.langs}}</p>
+        <!-- <p>Link: <a href="">{{project.link}}</a></p> -->
+        <p>Link: <a [href]="project.link" target="_blank" >{{ project.link }}</a></p>
+
     
         @if (deleteConfirm == false) {
             <div>

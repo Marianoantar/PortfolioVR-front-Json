@@ -6,6 +6,7 @@ export class Project {
         public year: number,
         public langs: string,
         public image: string,
+        public link: string
     ){}
 };
 
@@ -18,5 +19,6 @@ export class Proyecto {
     public year: number,
     public langs: string,
     public image: string,
+    public link: string
     ){}
 }
