@@ -4,5 +4,11 @@ export const Global = {
     url: 'https://portfolioback.mantar.uno/api/',
 
     // Codigo de edicion 
-    codigoEdicion: '12345'
+    codigoEdicion: '12345',
+
+    // mi whatsapp
+    whatsapp: '543415620901',
+
+    // mi Mail
+    mail: 'marianoantar@gmail.com'
 }

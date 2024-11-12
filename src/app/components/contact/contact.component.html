@@ -1,1 +1,20 @@
-<p>contact works!</p>
+<div id="contenedor-art">
+    
+    <div class="articulo" [ngClass]="{ 'from-left': whatsapp.desde === 'izquierda', 'from-right': whatsapp.desde === 'derecha' }">
+        <div id="titulo-articulo">
+            <span><img [src]="whatsapp.icono" alt="Icono" class="icono"></span>
+            <h2>{{ whatsapp.titulo }}</h2>
+        </div>
+        <p>{{ whatsapp.contenido }}</p>
+        <button (click)="whatsappLink()">Escribir mensaje</button>
+    </div>
+    <div class="articulo" [ngClass]="{ 'from-left': mail.desde === 'izquierda', 'from-right': mail.desde === 'derecha' }">
+        <div id="titulo-articulo">
+            <span><img [src]="mail.icono" alt="Icono" class="icono"></span>
+            <h2>{{mail.titulo }}</h2>
+        </div>
+        <p href="mailLink()" target="_blank">{{ mail.contenido }}</p>
+        <button (click)="mailLink()">Escribir mail</button>
+    </div>
+
+</div>
