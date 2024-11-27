@@ -14,6 +14,7 @@ export class ContactComponent {
 
   public miWhatsapp: string;
   public miMail: string;
+  public miLinkedin: string;
 
     whatsapp = {
     contenido: `${Global.whatsapp}`,
@@ -28,10 +29,18 @@ export class ContactComponent {
     icono: 'assets/img/gmail1.png',
     titulo: 'Correo electrónico'
   }
+
+  linkedin = {
+    contenido: `${Global.linkedin}`,
+    desde: 'izquierda',
+    icono: 'assets/img/linkedin.png',
+    titulo: 'Linkedin'
+  }
   
   constructor() {
     this.miWhatsapp = Global.whatsapp;
     this.miMail = Global.mail;
+    this.miLinkedin = Global.linkedin;
    }
 
   whatsappLink() {
@@ -41,9 +50,13 @@ export class ContactComponent {
   }
 
   mailLink() {
-    // return `mailto:${this.miMail}`;
     const subject = 'Asunto del correo';
     const url = `mailto:${this.miMail}?subject=${encodeURIComponent(subject)}`;
+    window.open(url, '_blank');
+  }
+
+  linkedinLink() {
+    const url = `http://${this.miLinkedin}`;
     window.open(url, '_blank');
   }
 

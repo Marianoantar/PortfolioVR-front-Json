@@ -38,7 +38,9 @@ article h2{
 article p{
 	padding-top: 20px;
 	padding-bottom: 30px;
-	text-align: justify;
+	text-align:left;
+	line-height: 4vh;
+	text-indent: 20px;
 }
 
 @media(600px < width <= 800px){

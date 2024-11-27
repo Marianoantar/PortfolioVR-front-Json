@@ -115,15 +115,7 @@ header a:hover,
 	transform:scale(1.50,1.50);
 }
 
-@media (550px < width <= 700px) {
-	header a{
-		padding-right: 2vw;
-		padding-left: 2vw;
-	}
-	#logo{
-		font-size:3.2vw;
-	}
-}
+
 
 @media (width<=550px) {
 	header a{
@@ -142,12 +134,12 @@ header a:hover,
 	height: auto;
 	width: 75%;
 	margin: 0px auto;
-	box-shadow: 0px 0px 40px black;
+	box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
 	border-left:1px solid #b7b7b7;
 	border-right:1px solid #b7b7b7;
 	background: rgba(255, 255, 255, 0.7);
 	padding-top: 120px;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 
@@ -158,15 +150,30 @@ header a:hover,
 	height: auto;
 }
 
+@media (550px < width <= 700px) {
+	header a{
+		padding-right: 2vw;
+		padding-left: 2vw;
+	}
+	#logo{
+		font-size:3.2vw;
+	}
+
+	#content{
+		width: 100%;
+		box-shadow: none;
+	}
+}
+
 
 @media(width < 550px){
+	#content{
+		width: 100%;
+		box-shadow: none;
+	}
 	.container .image{
 		width: 100%;
 	}
-	#content{
-		width: 85%;
-	}
-
 }
 
 .container h1{

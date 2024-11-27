@@ -16,5 +16,13 @@
         <p href="mailLink()" target="_blank">{{ mail.contenido }}</p>
         <button (click)="mailLink()">Escribir mail</button>
     </div>
-
+    <div class="articulo" [ngClass]="{ 'from-left': linkedin.desde === 'izquierda', 'from-right': linkedin.desde === 'derecha' }">
+        <div id="titulo-articulo">
+            <span><img [src]="linkedin.icono" alt="Icono" class="icono"></span>
+            <h2>{{linkedin.titulo }}</h2>
+        </div>
+        <p href="linkedinLink()" target="_blank">linkedin.com/in/mariano-antar-25ba08225/</p>
+        <button (click)="linkedinLink()">Ir a perfil</button>
+    </div>
+    
 </div>
